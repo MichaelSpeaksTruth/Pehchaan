@@ -67,11 +67,11 @@ We leveraged the power of **AWS Serverless** to keep it scalable and low-cost.
 
 ```mermaid
 graph LR
-    A[User (WhatsApp/Web)] -->|Voice + Image| B(API Gateway)
-    B --> C{AWS Lambda}
-    C -->|Audio| D[Amazon Transcribe]
-    C -->|Image| E[Amazon Rekognition]
-    D & E --> F[Amazon Bedrock]
-    F -->|Verified/Flagged| G[(DynamoDB Ledger)]
-    G --> H[Bank/Credit Portal]
+    A["User (WhatsApp/Web)"] -->|"Voice + Image"| B("API Gateway")
+    B --> C{"AWS Lambda"}
+    C -->|"Audio"| D["Amazon Transcribe"]
+    C -->|"Image"| E["Amazon Rekognition"]
+    D & E --> F["Amazon Bedrock"]
+    F -->|"Verified/Flagged"| G[("DynamoDB Ledger")]
+    G --> H["Bank/Credit Portal"]
 ```
